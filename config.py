@@ -1,0 +1,6 @@
+COUCHBASE_CONN_STR = "couchbases://cb.59r9vgmia23gzisz.cloud.couchbase.com"
+COUCHBASE_USERNAME = "admin"
+COUCHBASE_PASSWORD = "Password123!"
+BUCKET_NAME = "travel-sample"
+SCOPE_NAME = "inventory"
+COLLECTION_NAME = "hotel"

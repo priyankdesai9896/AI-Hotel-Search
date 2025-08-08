@@ -1,0 +1,8 @@
+couchbase==4.4.0
+sentence-transformers
+langchain
+rich
+pandas
+numpy
+streamlit
+torch==2.2.2
