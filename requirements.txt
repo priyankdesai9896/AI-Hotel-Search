@@ -1,6 +1,8 @@
 couchbase==4.4.0
 sentence-transformers
-langchain
+langchain==0.2.*
+langchain-couchbase
+langchain-huggingface
 rich
 pandas
 numpy
