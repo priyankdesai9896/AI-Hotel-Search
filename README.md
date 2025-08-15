@@ -1,11 +1,11 @@
-# Semantic Search with Couchbase and LangChain
+# Semantic Search
 
 This project provides a framework to embed and store text documents (e.g., hotel data) into Couchbase using `LangChain`, `sentence-transformers`, and `Torch` for semantic search.
 
 It includes utilities to:
 - Generate or load embeddings
 - Store them in a Couchbase database
-- Query them using LangChain's vector store abstractions
+- Query them using vector store abstractions
 - Interface with the system using Streamlit
 
 ---
@@ -24,7 +24,6 @@ It includes utilities to:
 
 ## 🧠 Features
 
-- 🔗 Uses LangChain's vector store abstraction
 - 🧠 Embeds documents using Sentence Transformers
 - 🗃️ Stores and queries embeddings using Couchbase
 - 🖥️ Supports interactive interface via Streamlit (optional)
@@ -84,7 +83,6 @@ streamlit run hotel_search_app.py
 
 ## 🧪 Tech Stack
 
-- **LangChain**: for vector store and retrieval abstraction
 - **Sentence Transformers**: for generating semantic embeddings
 - **Couchbase**: vector-enabled document database
 - **Torch**: backend for transformers
