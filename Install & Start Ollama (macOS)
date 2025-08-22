@@ -1,34 +1,29 @@
-Install & Start Ollama (macOS)
+1. Install & Start Ollama (macOS)
 
-Download & install
+* Download & install
+* Go to https://ollama.com/download
+* Download the macOS .dmg installer
+* Drag Ollama.app to your Applications folder
 
-Go to https://ollama.com/download
+2. Start Ollama server
 
-Download the macOS .dmg installer
+* Launch Ollama.app from Applications (it runs a background server at http://localhost:11434)
+* You should see a little Ollama icon in your menu bar (top-right)
 
-Drag Ollama.app to your Applications folder
+3. Pull and run a model
 
-Start Ollama server
-
-Launch Ollama.app from Applications (it runs a background server at http://localhost:11434)
-
-You should see a little Ollama icon in your menu bar (top-right)
-
-Pull and run a model
-In your terminal:
+In your terminal run the following commands:
 
 ollama pull llama3
 ollama run llama3
 
+* The first pull will download a few GB, so it may take time.
+* Once running, you should see a REPL where you can type prompts.
 
-The first pull will download a few GB, so it may take time.
+4. Verify server is running
 
-Once running, you should see a REPL where you can type prompts.
-
-Verify server is running
-Test with:
+Test with following command:
 
 curl http://localhost:11434/api/tags
-
 
 If it lists available models (e.g. llama3), the server is good to go.
