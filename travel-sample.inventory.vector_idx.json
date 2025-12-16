@@ -1,0 +1,200 @@
+{
+  "type": "fulltext-index",
+  "name": "travel-sample.inventory.vector_idx",
+  "uuid": "796a5c2574d05b80",
+  "sourceType": "gocbcore",
+  "sourceName": "travel-sample",
+  "sourceUUID": "8b032a4dbaa34c5bcde34006516af9c2",
+  "planParams": {
+    "maxPartitionsPerPIndex": 1024,
+    "indexPartitions": 1
+  },
+  "params": {
+    "doc_config": {
+      "docid_prefix_delim": "",
+      "docid_regexp": "",
+      "mode": "scope.collection.type_field",
+      "type_field": "type"
+    },
+    "mapping": {
+      "analysis": {},
+      "default_analyzer": "standard",
+      "default_datetime_parser": "dateTimeOptional",
+      "default_field": "_all",
+      "default_mapping": {
+        "dynamic": false,
+        "enabled": false
+      },
+      "default_type": "_default",
+      "docvalues_dynamic": false,
+      "index_dynamic": true,
+      "store_dynamic": true,
+      "type_field": "_type",
+      "types": {
+        "inventory.hotel": {
+          "dynamic": false,
+          "enabled": true,
+          "properties": {
+            "city": {
+              "dynamic": false,
+              "enabled": true,
+              "fields": [
+                {
+                  "analyzer": "keyword",
+                  "index": true,
+                  "name": "city",
+                  "store": true,
+                  "type": "text"
+                }
+              ]
+            },
+            "country": {
+              "dynamic": false,
+              "enabled": true,
+              "fields": [
+                {
+                  "analyzer": "keyword",
+                  "index": true,
+                  "name": "country",
+                  "store": true,
+                  "type": "text"
+                }
+              ]
+            },
+            "description": {
+              "dynamic": false,
+              "enabled": true,
+              "fields": [
+                {
+                  "analyzer": "en",
+                  "index": true,
+                  "name": "description",
+                  "store": true,
+                  "type": "text"
+                }
+              ]
+            },
+            "description_embedding": {
+              "dynamic": false,
+              "enabled": true,
+              "fields": [
+                {
+                  "dims": 384,
+                  "index": true,
+                  "name": "description_embedding",
+                  "similarity": "cosine",
+                  "type": "vector",
+                  "vector_index_optimized_for": "recall"
+                }
+              ]
+            },
+            "free_breakfast": {
+              "dynamic": false,
+              "enabled": true,
+              "fields": [
+                {
+                  "index": true,
+                  "name": "free_breakfast",
+                  "store": true,
+                  "type": "boolean"
+                }
+              ]
+            },
+            "free_internet": {
+              "dynamic": false,
+              "enabled": true,
+              "fields": [
+                {
+                  "index": true,
+                  "name": "free_internet",
+                  "store": true,
+                  "type": "boolean"
+                }
+              ]
+            },
+            "free_parking": {
+              "dynamic": false,
+              "enabled": true,
+              "fields": [
+                {
+                  "index": true,
+                  "name": "free_parking",
+                  "store": true,
+                  "type": "boolean"
+                }
+              ]
+            },
+            "name": {
+              "dynamic": false,
+              "enabled": true,
+              "fields": [
+                {
+                  "analyzer": "keyword",
+                  "index": true,
+                  "name": "name",
+                  "store": true,
+                  "type": "text"
+                }
+              ]
+            },
+            "pets_ok": {
+              "dynamic": false,
+              "enabled": true,
+              "fields": [
+                {
+                  "index": true,
+                  "name": "pets_ok",
+                  "store": true,
+                  "type": "boolean"
+                }
+              ]
+            },
+            "price": {
+              "dynamic": false,
+              "enabled": true,
+              "fields": [
+                {
+                  "analyzer": "en",
+                  "index": true,
+                  "name": "price",
+                  "store": true,
+                  "type": "text"
+                }
+              ]
+            },
+            "state": {
+              "dynamic": false,
+              "enabled": true,
+              "fields": [
+                {
+                  "analyzer": "keyword",
+                  "index": true,
+                  "name": "state",
+                  "store": true,
+                  "type": "text"
+                }
+              ]
+            },
+            "vacancy": {
+              "dynamic": false,
+              "enabled": true,
+              "fields": [
+                {
+                  "index": true,
+                  "name": "vacancy",
+                  "store": true,
+                  "type": "boolean"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "store": {
+      "indexType": "scorch",
+      "segmentVersion": 16
+    }
+  },
+  "sourceParams": {}
+}
