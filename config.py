@@ -1,4 +1,4 @@
-COUCHBASE_CONN_STR = "<your cluster string"
+COUCHBASE_CONN_STR = "your cluster string"
 COUCHBASE_USERNAME = "you username"
 COUCHBASE_PASSWORD = "your password"
 BUCKET_NAME = "travel-sample"
